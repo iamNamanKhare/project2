@@ -28,12 +28,12 @@ const Form = () => {
 
       <div className="input_label">No. Of Assignments </div>
       <input
-        className="input_field_container"
+        className="input_field_container_no"
         id="i_3"
         onClick={(e) => changeBorder(e.target.id)}
       />
       <div className="input_label">No. of opening </div>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div className="chip_wrapper">
         <div
           className="chip"
           id="c_1"
@@ -48,7 +48,7 @@ const Form = () => {
         />
       </div>
       <div className="input_label">Tags</div>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div className="chip_wrapper">
         <div
           onClick={(e) => changeColor(e.target.id)}
           id="c_2"
@@ -110,7 +110,7 @@ const Form = () => {
       <textarea className="text_area" />
 
       <div className="input_label">Tech Stack</div>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div className="chip_wrapper">
         <div
           onClick={(e) => changeColor(e.target.id)}
           id="c_10"
@@ -142,7 +142,7 @@ const Form = () => {
         </div>
       </div>
       <div className="input_label">Openings</div>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div className="chip_wrapper">
         <div
           onClick={(e) => changeColor(e.target.id)}
           id="c_12"

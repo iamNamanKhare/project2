@@ -5,7 +5,7 @@ select:focus {
 }
 
 .form_container {
-  padding: 2% 7% 2% 7%;
+  padding: 3% 7% 3% 7%;
 
   margin: 5% 20% 5% 20%;
 
@@ -26,7 +26,7 @@ select:focus {
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(214, 214, 214);
+  border-color: #949494;
   padding: 13px;
   width: 60%;
   margin: 0px 0px 15px 0px;
@@ -35,20 +35,23 @@ select:focus {
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(214, 214, 214);
+  border-color: #949494;
   padding: 13px;
   width: 15%;
-  margin: 0px 0px 40px 0px;
+  margin: 0px 0px 15px 0px;
 }
 
 .input_label {
   font-size: large;
   font-weight: 600;
-  margin: 10px 10px 20px 10px;
+  margin-bottom: 10px;
   color: black;
 }
 
-.input_text {
+.chip_wrapper {
+  margin: 10px 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .chip {
   border-radius: 20px;
@@ -82,7 +85,7 @@ select:focus {
 }
 .text_area {
   padding: 20px;
-  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 10px 0 10px 0;
   border-width: 1px;
   border-style: solid;
   border-color: black;
