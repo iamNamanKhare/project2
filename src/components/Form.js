@@ -24,7 +24,7 @@ const Form = () => {
         >
           Yet to be uploaded
         </div>
-        <input className="input_field_container" />
+        <input className="input_field_container_no" />
       </div>
       <div className="input_label">Tags</div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
@@ -72,17 +72,84 @@ const Form = () => {
         </div>
         <div
           onClick={(e) => changeColor(e.target.id)}
-          id="c_7"
+          id="c_8"
           className="chip"
         >
           Final-Services
         </div>
         <div
           onClick={(e) => console.log("adding tag")}
-          id="c_7"
+          id="c_9"
           className="schip"
         >
           + add-tag
+        </div>
+      </div>
+      <div className="input_label">Company Description</div>
+      <textarea className="text_area" />
+
+      <div className="input_label">Tech Stack</div>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div
+          onClick={(e) => changeColor(e.target.id)}
+          id="c_10"
+          className="chip"
+        >
+          AWS
+        </div>
+        <div
+          onClick={(e) => changeColor(e.target.id)}
+          id="c_11"
+          className="chip"
+        >
+          React
+        </div>
+        <div
+          onClick={(e) => changeColor(e.target.id)}
+          id="c_12"
+          className="chip"
+        >
+          Python
+        </div>
+
+        <div
+          onClick={(e) => console.log("adding tag")}
+          id="c_13"
+          className="schip"
+        >
+          + Add tech-stack
+        </div>
+      </div>
+      <div className="input_label">Openings</div>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div
+          onClick={(e) => changeColor(e.target.id)}
+          id="c_12"
+          className="chip"
+        >
+          Software Development Internship
+        </div>
+        <div
+          onClick={(e) => changeColor(e.target.id)}
+          id="c_12"
+          className="chip"
+        >
+          Full-Stack Developer
+        </div>
+        <div
+          onClick={(e) => changeColor(e.target.id)}
+          id="c_12"
+          className="chip"
+        >
+          Supply chain intern
+        </div>
+
+        <div
+          onClick={(e) => console.log("adding tag")}
+          id="c_13"
+          className="schip"
+        >
+          + Add Openings
         </div>
       </div>
     </div>
