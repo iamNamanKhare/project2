@@ -6,15 +6,32 @@ const Form = () => {
     let element = document.getElementById(`${id}`).style;
     element.backgroundColor = "#1e65e5";
   };
+  const changeBorder = (id) => {
+    let style = document.getElementById(`${id}`).style;
+    style.borderColor = "#2dc5a1";
+    style.borderWidth = "2px";
+  };
   return (
     <div className="form_container">
       <div className="input_label">Company </div>
-      <input className="input_field_container" />
+      <input
+        className="input_field_container"
+        id="i_1"
+        onClick={(e) => changeBorder(e.target.id)}
+      />
       <div className="input_label">Logo </div>
-      <input className="input_field_container" />
+      <input
+        className="input_field_container"
+        id="i_2"
+        onClick={(e) => changeBorder(e.target.id)}
+      />
 
       <div className="input_label">No. Of Assignments </div>
-      <input className="input_field_container" />
+      <input
+        className="input_field_container"
+        id="i_3"
+        onClick={(e) => changeBorder(e.target.id)}
+      />
       <div className="input_label">No. of opening </div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         <div
@@ -24,7 +41,11 @@ const Form = () => {
         >
           Yet to be uploaded
         </div>
-        <input className="input_field_container_no" />
+        <input
+          className="input_field_container_no"
+          id="i_4"
+          onClick={(e) => changeBorder(e.target.id)}
+        />
       </div>
       <div className="input_label">Tags</div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
