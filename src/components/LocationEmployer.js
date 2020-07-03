@@ -15,7 +15,7 @@ export default function LocationSelect() {
   return (
     <div>
       <div className="select_country_header">
-        Select Country
+        Select Locations
         <span
           className="expand"
           onClick={() => {

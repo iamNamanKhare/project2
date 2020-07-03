@@ -234,6 +234,7 @@ class Form extends Component {
               + Add Openings
             </div>
           </div>
+          <div className="input_label"> Locations</div>
           <LocationSelect />
         </div>
       </div>
