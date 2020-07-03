@@ -175,14 +175,14 @@ export default function LocationSelect() {
           onClick={() => {
             $("#select_continent").toggle(400);
             var x = document.getElementById("select_continent_button");
-            if (x.innerHTML == "Expand") {
+            if (x.innerHTML === "Expand") {
               x.innerHTML = "Close";
             } else {
               x.innerHTML = "Expand";
             }
           }}
         >
-          <button id="select_continent_button">Expand</button>
+          <button id="select_continent_button" onClick={(e) => e.preventDefault()}>Expand</button>
         </span>
       </div>
       <div id="select_continent" className="continents">

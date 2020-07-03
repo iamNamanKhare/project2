@@ -7,11 +7,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-<<<<<<< HEAD
     "bootstrap": "^4.5.0",
-=======
     "jquery": "^3.5.1",
->>>>>>> d0c087d3ddbde516b38a98e83021abe3115e4258
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
