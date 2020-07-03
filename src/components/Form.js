@@ -4,8 +4,46 @@ import Dialog from "./Dialog";
 import $ from "jquery";
 class Form extends Component {
   state = {
-    add_tag: false,
+    add_tag: [],
+    add_techStack: [],
+    add_openings: [],
   };
+
+  componentDidMount() {
+    var inputOpening = document.getElementById("add_openings");
+    inputOpening.addEventListener("keyup", (event) => {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+
+        let array = this.state.add_openings;
+        array.push(event.target.value);
+        this.setState({ add_openings: array });
+        event.target.value = "";
+      }
+    });
+    var inputTechstack = document.getElementById("add_techstack");
+    inputTechstack.addEventListener("keyup", (event) => {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+
+        let array = this.state.add_techStack;
+        array.push(event.target.value);
+        this.setState({ add_techStack: array });
+        event.target.value = "";
+      }
+    });
+    var inputTag = document.getElementById("add_tag");
+    inputTag.addEventListener("keyup", (event) => {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+
+        let array = this.state.add_tag;
+        array.push(event.target.value);
+        this.setState({ add_tag: array });
+        event.target.value = "";
+      }
+    });
+  }
 
   dialogOpen = () => {
     this.setState({ add_tag: true });
@@ -18,6 +56,77 @@ class Form extends Component {
     style.borderColor = "#2dc5a1";
     style.borderWidth = "2px";
   };
+  addTag = (element) => {};
+  addTagChip() {
+    let array = this.state.add_tag;
+    let z = [];
+    z = array.map((value) => {
+      return (
+        <div class="del_chip">
+          {value}
+          <span
+            class="closebtn"
+            id={`btn_${value}`}
+            onClick={(e) => {
+              console.log(e.target.id);
+              let element = document.getElementById(e.target.id);
+              element.parentElement.style.display = "none";
+            }}
+          >
+            &times;
+          </span>
+        </div>
+      );
+    });
+    return z;
+  }
+
+  addTechChip() {
+    let array = this.state.add_techStack;
+    let z = [];
+    z = array.map((value) => {
+      return (
+        <div class="del_chip">
+          {value}
+          <span
+            class="closebtn"
+            id={`btn_${value}`}
+            onClick={(e) => {
+              console.log(e.target.id);
+              let element = document.getElementById(e.target.id);
+              element.parentElement.style.display = "none";
+            }}
+          >
+            &times;
+          </span>
+        </div>
+      );
+    });
+    return z;
+  }
+  addOpeningChip() {
+    let array = this.state.add_openings;
+    let z = [];
+    z = array.map((value) => {
+      return (
+        <div className="del_chip">
+          {value}
+          <span
+            className="closebtn"
+            id={`btn_${value}`}
+            onClick={(e) => {
+              console.log(e.target.id);
+              let element = document.getElementById(e.target.id);
+              element.parentElement.style.display = "none";
+            }}
+          >
+            &times;
+          </span>
+        </div>
+      );
+    });
+    return z;
+  }
   render() {
     return (
       <div>
@@ -25,7 +134,7 @@ class Form extends Component {
         <Dialog id="dialog3" heading="Add TechStack" button="Add" />
         <Dialog id="dialog2" heading="Add Openings" button="Add" />
 
-        <div className={this.props.class} id="form">
+        <div className="form_container" id="form">
           <div className="input_label">Company </div>
           <input
             className="input_field_container"
@@ -63,6 +172,7 @@ class Form extends Component {
               onClick={(e) => this.changeBorder(e.target.id)}
             />
           </div>
+
           <div className="input_label">Tags</div>
           <div className="chip_wrapper">
             <div
@@ -135,15 +245,8 @@ class Form extends Component {
             >
               Final-Services
             </div>
-            <div
-              onClick={(e) => {
-                $(`#dialog`).show();
-              }}
-              id="c_9"
-              className="schip"
-            >
-              + add-tag
-            </div>
+            <div style={{ display: "flex" }}>{this.addTagChip()}</div>
+            <input id="add_tag" placeholder="Add tag" className="input_chip" />
           </div>
           <div className="input_label">Company Description</div>
           <textarea className="text_area" />
@@ -180,16 +283,12 @@ class Form extends Component {
             >
               Python
             </div>
-
-            <div
-              onClick={(e) => {
-                $(`#dialog3`).show();
-              }}
-              id="c_13"
-              className="schip"
-            >
-              + Add tech-stack
-            </div>
+            <div style={{ display: "flex" }}>{this.addTechChip()}</div>
+            <input
+              id="add_techstack"
+              placeholder="Add techstack"
+              className="input_chip"
+            />
           </div>
           <div className="input_label">Openings</div>
           <div className="chip_wrapper">
@@ -223,16 +322,13 @@ class Form extends Component {
             >
               Supply chain intern
             </div>
+            <div style={{ display: "flex" }}>{this.addOpeningChip()}</div>
 
-            <div
-              onClick={(e) => {
-                $(`#dialog2`).show();
-              }}
-              id="c_17"
-              className="schip"
-            >
-              + Add Openings
-            </div>
+            <input
+              id="add_openings"
+              placeholder="Add Openings"
+              className="input_chip"
+            />
           </div>
           <div className="input_label"> Locations</div>
           <LocationSelect />

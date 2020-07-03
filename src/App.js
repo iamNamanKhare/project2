@@ -10,7 +10,7 @@ function App() {
         <Form class="formcontainers" />
       </Hidden>
       <Hidden only={["xs"]}>
-        <Form class="formcontainers" />
+        <Form class="formcontainer" />
       </Hidden>
     </div>
   );

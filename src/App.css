@@ -7,35 +7,12 @@ select:focus {
 .form_container {
   padding: 3% 7% 3% 7%;
 
-  margin: 5% 20% 5% 20%;
+  margin: 1% 10% 5% 10%;
 
   color: white;
-  border-radius: 13px;
 
   display: flex;
 
-  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(214, 214, 214);
-  background-color: #f1f5fd;
-  flex-direction: column;
-}
-.form_container {
-  padding: 3% 7% 3% 7%;
-
-  margin: 5% 2% 5% 2%;
-
-  color: white;
-  border-radius: 13px;
-
-  display: flex;
-
-  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(214, 214, 214);
-  background-color: #f1f5fd;
   flex-direction: column;
 }
 
@@ -67,19 +44,52 @@ select:focus {
   color: black;
 }
 
+.del_chip {
+  margin: 0px 10px 10px 10px;
+
+  white-space: nowrap;
+  color: white;
+  padding: 0 25px;
+  height: 40px;
+  font-size: 15px;
+  line-height: 50px;
+  border-radius: 20px;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #417de9;
+  color: white;
+}
+
+.closebtn {
+  padding-left: 5px;
+  align-content: center;
+  color: black;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .chip_wrapper {
   margin: 10px 0 20px 0;
   display: flex;
   flex-wrap: wrap;
 }
 .chip {
-  border-radius: 20px;
   background-color: #99b9f3;
-  padding: 2px 10px 2px 10px;
+
   margin: 0px 10px 10px 10px;
-  height: 40px;
+
   white-space: nowrap;
   color: white;
+  padding: 0 25px;
+  height: 40px;
+  font-size: 15px;
+  line-height: 50px;
+  border-radius: 20px;
 
   text-align: center;
   justify-content: center;
@@ -89,11 +99,14 @@ select:focus {
 }
 
 .chip_change {
-  border-radius: 20px;
   background-color: #417de9;
-  padding: 2px 10px 2px 10px;
+
   margin: 0px 10px 10px 10px;
+  padding: 0 25px;
   height: 40px;
+  font-size: 15px;
+  line-height: 50px;
+  border-radius: 20px;
   white-space: nowrap;
   color: white;
 
@@ -104,20 +117,19 @@ select:focus {
   cursor: pointer;
 }
 .schip {
-  border-radius: 40px;
-  background-color: #061838;
-  padding: 2px 10px 2px 10px;
-  margin: 0px 10px 10px 10px;
-  height: 40px;
+  border-radius: 3px;
+  background-color: gray;
+  padding: 5px;
+  font-size: 15px;
+  height: 25px;
   white-space: nowrap;
-  color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  text-align: center;
-  justify-content: center;
+  color: black;
+  margin-right: 10px;
   align-items: center;
   display: flex;
   cursor: pointer;
 }
+
 .text_area {
   padding: 20px;
   margin: 10px 0 10px 0;
@@ -189,12 +201,13 @@ select:focus {
 
 .continents {
   padding: 2%;
-  margin: 3%;
+  margin: 0 20% 20px 20%;
   display: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   flex-wrap: wrap;
   background-color: white;
   flex-direction: column;
+  border-top: 1px solid black;
 }
 .accordion_container {
   margin-bottom: 0;
@@ -212,15 +225,22 @@ select:focus {
   display: flex;
   align-items: center;
   border-bottom: 1px solid black;
-  flex-wrap: wrap;
   padding: 12px 5px 10px 5px;
+  flex-wrap: wrap;
+}
+.city_wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+  flex: 5;
+  width: 100%;
 }
 .city:nth-child(1) {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   border-top: 1px solid black;
-  border-bottom: 1px solid black;
+
   padding: 12px 5px 10px 5px;
 }
 
@@ -240,12 +260,40 @@ select:focus {
   padding: 10px;
   font-size: larger;
   position: relative;
-  color: white;
-  background-color: #99b9f3;
+  color: black;
+  margin: 0 20% 0 20%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .expand {
   position: absolute;
   right: 0;
   font-size: smaller;
+}
+
+.input_chip {
+  height: 20px;
+  font-size: 15px;
+  width: fit-content;
+  border-width: thin;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: gray;
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: gray;
+  text-align: center;
+}
+
+::placeholder {
+  color: gray;
+  text-align: center;
 }

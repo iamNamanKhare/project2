@@ -21,7 +21,7 @@ const Accordion = (props) => {
     z = array.map((value) => {
       return (
         <div
-          className="chip"
+          className="schip"
           onClick={(e) => {
             const { id } = e.target;
             $(`#${id}`).toggleClass("chip_change");
@@ -41,14 +41,13 @@ const Accordion = (props) => {
     return z;
   };
   const renderCountry = (id) => {
-    console.log(countryData[id]);
     let z = [];
     let array = countryData[id];
     z = array.map((value) => {
       return (
         <div className="city">
-          <div> {value}</div>
-          {renderCity(value)}
+          <div style={{ flex: 1 }}> {value}</div>
+          <div className="city_wrapper">{renderCity(value)}</div>
         </div>
       );
     });
