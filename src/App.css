@@ -21,6 +21,23 @@ select:focus {
   background-color: #f1f5fd;
   flex-direction: column;
 }
+.form_container {
+  padding: 3% 7% 3% 7%;
+
+  margin: 5% 2% 5% 2%;
+
+  color: white;
+  border-radius: 13px;
+
+  display: flex;
+
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(214, 214, 214);
+  background-color: #f1f5fd;
+  flex-direction: column;
+}
 
 .input_field_container {
   border-radius: 5px;
@@ -182,6 +199,7 @@ select:focus {
 .accordion_container {
   margin-bottom: 0;
   color: black;
+  flex-wrap: wrap;
 }
 
 .accordion_elements {
@@ -194,10 +212,12 @@ select:focus {
   display: flex;
   align-items: center;
   border-bottom: 1px solid black;
+  flex-wrap: wrap;
   padding: 12px 5px 10px 5px;
 }
 .city:nth-child(1) {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;

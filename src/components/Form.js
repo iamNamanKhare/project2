@@ -25,7 +25,7 @@ class Form extends Component {
         <Dialog id="dialog3" heading="Add TechStack" button="Add" />
         <Dialog id="dialog2" heading="Add Openings" button="Add" />
 
-        <div className="form_container" id="form">
+        <div className={this.props.class} id="form">
           <div className="input_label">Company </div>
           <input
             className="input_field_container"
